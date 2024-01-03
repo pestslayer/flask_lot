@@ -41,16 +41,16 @@ def get_single_car(current_user_token, id):
 @api.route('/inventory/<id>', methods = ['POST', "PUT"])
 @token_required
 def update_contact(current_user_token, id):
+    print(current_user_token)
     inventory = Inventory.query.get(id)
     inventory.make = request.json['make']
     inventory.model = request.json['model']
     inventory.year = request.json['year']
     inventory.color = request.json['color']
-    inventory.user_token = current_user_token
-
+    inventory.user_token = current_user_token.token
     db.session.commit()
     response = inventory_schema.dump(inventory)
-    return jsonify(inventory)
+    return jsonify(response)
 
 @api.route('/inventory/<id>', methods = ['DELETE'])
 @token_required
