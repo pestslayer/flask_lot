@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="margin-left: 40%; margin-top: 10%;"><script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+    <dotlottie-player src="https://lottie.host/601b6517-9f8e-40fb-b2d4-ae616ad70a46/S2GZO3jwUJ.json" background="transparent"
+     speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player></div>
+<main class="container p-5 bg-dark text-light" style="">
+    <div class="row">
+        <aside class="col-12 col-md-6">
+            <h2>Create Your Account</h2>
+            {% include 'forms.html' %}
+        </aside>
+    </div>
+</main>
+{% endblock %}
