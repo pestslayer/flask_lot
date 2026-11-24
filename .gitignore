@@ -1,0 +1,22 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+venv/
+myenv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local database
+app.db
+*.sqlite3
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
